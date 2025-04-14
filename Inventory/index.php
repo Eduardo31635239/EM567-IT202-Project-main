@@ -16,7 +16,7 @@ include("item.php");
        <?php include("header.inc.php"); ?>
    </header>
    <section style="height: 375px;">
-       <nav style="float: left; height: 100%;">
+       <nav style="float: left; height: 100%; min-width: 175px; width: auto;">
            <?php include("nav.inc.php"); ?>
        </nav>
        <main>

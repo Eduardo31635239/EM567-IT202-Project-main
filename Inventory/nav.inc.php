@@ -27,7 +27,7 @@
                    <strong>Add New Category</strong></a></td>
        </tr>
        <tr>
-           <td>><img src="images/items.png" alt="Items Icon" width="12" height="12">&nbsp;
+           <td><img src="images/items.png" alt="Items Icon" width="12" height="12">&nbsp;
                 <strong>Items</strong></td>
        </tr>
        <tr>
