@@ -1,5 +1,5 @@
 <?php
-// include('item.php');
+require_once('item.php');
 if (isset($_SESSION['login'])) {
    $itemID = $_POST['itemID'];
    $answer = $_POST['answer'];

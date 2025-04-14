@@ -1,3 +1,21 @@
+<script language="javascript">
+   function listbox_dblclick() {
+       document.items.displayitem.click()
+   }
+   function button_click(target) {
+       var userConfirmed = true;
+       if (target == 1) {
+           userConfirmed = confirm("Are you sure you want to remove this category?");
+       }
+       if (userConfirmed) {
+           if (target == 0) items.action = "index.php?content=displayitem";
+           if (target == 1) items.action = "index.php?content=removeitem";
+           if (target == 2) items.action = "index.php?content=updateitem";
+       } else {
+           alert("Action canceled.");
+       }
+   }
+</script>
 h2>Select Item</h2>
 <form name="items" method="post">
    <select name="itemID" size="20">
@@ -12,4 +30,8 @@ h2>Select Item</h2>
        }
        ?>
    </select>
+   <br>
+   <input type="submit" onClick="button_click(0)" name="displayitem" value="View item">
+   <input type="submit" onClick="button_click(1)" name="deleteitem" value="Delete item">
+   <input type="submit" onClick="button_click(2)" name="updateitem" value="Update item">
 </form>

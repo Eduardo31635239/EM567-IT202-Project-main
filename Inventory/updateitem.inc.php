@@ -1,3 +1,24 @@
+<style>
+   form[name="item"] {
+       display: grid;
+       grid-template-columns: 125px 1fr;
+       gap: 10px 5px;
+       align-items: left;
+       max-width: 300px;
+       margin: 0px;
+   }
+   form[name="item"] label {
+       text-align: left;
+       padding-right: 5px;
+   }
+   form[name="item"] input[type="text"] {
+       width: 100%;
+   }
+   form[name="item"] input[type="submit"] {
+       grid-column: 2;
+       justify-self: start;
+   }
+</style>
 <?php
 if (!isset($_POST['itemID']) or (!is_numeric($_POST['itemID']))) {
 ?>
@@ -43,4 +64,8 @@ if (!isset($_POST['itemID']) or (!is_numeric($_POST['itemID']))) {
     }
  }
  ?>
+ <script language="javascript">
+   document.item.itemCode.focus();
+   document.item.itemCode.select();
+</script>
  
