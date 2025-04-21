@@ -16,7 +16,7 @@
        }
    }
 </script>
-h2>Select Item</h2>
+<h2>Select Item</h2>
 <form name="items" method="post">
    <select name="itemID" size="20">
        <?php

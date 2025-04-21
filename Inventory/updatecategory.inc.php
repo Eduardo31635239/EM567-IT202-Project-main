@@ -20,6 +20,12 @@
    }
 </style>
 <?php
+if (!isset($_POST['categoryID']) or (!is_numeric($_POST['categoryID']))) {
+    ?>
+     <h2>You did not select a valid categoryID to update.</h2>
+     <a href="index.php?content=listcategories">List Categories</a>
+     <?php
+    } else {    
 $categoryID = $_POST['categoryID'];
 $category = Category::findCategory($categoryID);
 if ($category) {
@@ -41,6 +47,7 @@ if ($category) {
    <h2>Sorry, category <?php echo $categoryID; ?> not found</h2>
    <a href="index.php?content=listcategories">List Categories</a>
    <?php
+    }
 }
 ?>
 <script language="javascript">
