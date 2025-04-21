@@ -22,13 +22,6 @@ include("item.php");
            <?php include("nav.inc.php"); ?>
        </nav>
        <main>
-       <aside>
-           <?php include("aside.inc.php"); ?>
-           <script>
-               getRealTime();
-               setInterval(getRealTime, 5000);
-           </script>
-       </aside>
            <?php
            if (isset($_REQUEST['content'])) {
                include($_REQUEST['content'] . ".inc.php");
@@ -36,6 +29,13 @@ include("item.php");
                include("main.inc.php");
            }
            ?>
+             <aside>
+           <?php include("aside.inc.php"); ?>
+           <script>
+               getRealTime();
+               setInterval(getRealTime, 5000);
+           </script>
+       </aside>
        </main>
    </section>
    <footer>
